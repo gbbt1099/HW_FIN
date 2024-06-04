@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('img/background_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+#game-container {
+    width: 80%;
+    height: 70%;
+    border:none;
+    position: relative;
+    margin: auto;
+}
+
+#mole {
+    width: 20%;
+    height: 20%;
+    background: url('img/mole.png') no-repeat center center;
+    background-size: contain;  /* 使用 contain 确保图片不被裁剪 */
+    position: absolute;
+    display: none;
+}
+
+
+#score {
+    font-size: 3vw;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: white;
+}
+
+#icons-container {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    display: flex;
+    gap: 1vw;
+}
+
+.icon {
+    width: 5vw;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        max-width: 40%;
+    }
+    #score {
+        font-size: 4vw;  /* 調整較小屏幕的字體大小 */
+    }
+    .icon {
+        width: 10vw;  /* 調整較小屏幕的圖標大小 */
+    }
+}
